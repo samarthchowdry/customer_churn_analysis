@@ -43,3 +43,7 @@ By default, the Flask server runs on http://127.0.0.1:5000/
 ![Screenshot (281)](https://github.com/user-attachments/assets/2f969d1e-1041-472d-bf44-debf764f65a4)
 
 
+![Screenshot (282)](https://github.com/user-attachments/assets/cd5affab-60dd-4433-b7ce-49ee95ef2ae9)
+
+
+
