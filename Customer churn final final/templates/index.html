@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <style>
+            .cont{
+                text-align: left;
+                align-items: left;
+                font-size: 20px;
+                width:500px;
+                background-color:white;
+                border:2px solid black;
+            }
+            
+            input[type="text"]{
+                border: solid 1px black;
+                height: 25px;
+                width: 150px;
+                margin-bottom: 14px;
+                background-color:#DDDDDD;
+                box-shadow:5px 5px 5px #DDDDDD;
+            }
+            input[type="submit"]{
+                background-color:#76BED0;
+                height: 50px;
+                width: 140px;
+                font-size: 30px;
+                border-radius:5px;
+                cursor:pointer;
+                font-family: Georgia, serif;
+            }
+            body{
+                background-color:#7B9EA8;
+                
+                font-family: Georgia, serif;
+            }
+            form{
+                height:auto;
+                background-color:white;
+               
+                padding:20px;
+                
+            }
+            .cont1{
+                text-align:center;
+                background-color:white;
+                width:auto;
+                padding:0px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <div class="cont">
+            <div class="cont1">
+                <h1>Predict !</h1>
+            </div>
+            <hr>
+        <form action='/predict' method="POST">
+            
+  SeniorCitizen: <input type='text' name='SeniorCitizen'><br>
+
+  Tenure: <input type='text' name='tenure'><br>
+
+  MonthlyCharges: <input type='text' name='MonthlyCharges'><br>
+
+  TotalCharges: <input type='text' name='TotalCharges'><br>
+  
+  <!-- gender_Male: <input type='text' name='gender_Male'><br> -->
+  gender: <input type='text' name='gender'><br> <!--M/F-->
+
+
+  <!--  Partner_Yes: <input type='text' name='Partner_Yes'><br> -->
+  Partner: <input type='text' name='Partner'><br><!-- Yes/No-->
+
+
+  <!--  Dependents_Yes: <input type='text' name='Dependents_Yes'><br> -->
+  Dependents: <input type='text' name='Dependents'><br>  <!-- Yes/No-->
+
+  <!--  PhoneService_Yes: <input type='text' name='PhoneService_Yes'><br> -->
+  PhoneService: <input type='text' name='PhoneService'><br>  <!-- Yes/No-->
+
+
+  <!--  MultipleLines_Nophoneservice: <input type='text' name='MultipleLines_No phone service'><br>
+  MultipleLines_Yes: <input type='text' name='MultipleLines_Yes'><br> -->
+  MultipleLines: <input type='text' name='MultipleLines'><br>   <!-- Yes/No phone service-->
+
+
+
+  <!--  InternetService_Fiberoptic: <input type='text' name='InternetService_Fiber optic'><br>
+  InternetService_No: <input type='text' name='InternetService_No'><br> -->
+  InternetService: <input type='text' name='InternetService'><br>  <!-- Fiber optic/No-->
+
+
+
+  <!--  OnlineSecurity_Nointernetservice: <input type='text' name='OnlineSecurity_No internet service'><br>
+  OnlineSecurity_Yes: <input type='text' name='OnlineSecurity_Yes'><br> -->
+  OnlineSecurity: <input type='text' name='OnlineSecurity'><br> <!-- No internet service/No-->
+
+
+  <!--  OnlineBackup_Nointernetservice: <input type='text' name='OnlineBackup_No internet service'><br>
+  OnlineBackup_Yes: <input type='text' name='OnlineBackup_Yes'><br> -->
+  OnlineBackup: <input type='text' name='OnlineBackup'><br>  <!-- No internet service/Yes-->
+
+
+  <!--  DeviceProtection_Nointernetservice: <input type='text' name='DeviceProtection_No internet service'><br>
+  DeviceProtection_Yes: <input type='text' name='DeviceProtection_Yes'><br> -->
+  DeviceProtection: <input type='text' name='DeviceProtection'><br>   <!-- No internet service/Yes-->
+
+
+  <!--  TechSupport_Nointernetservice: <input type='text' name='TechSupport_No internet service'><br>
+  TechSupport_Yes: <input type='text' name='TechSupport_Yes'><br> -->
+  TechSupport: <input type='text' name='TechSupport'><br>  <!-- No internet service/Yes-->
+
+
+  <!--  StreamingTV_Nointernetservice: <input type='text' name='StreamingTV_No internet service'><br>
+  StreamingTV_Yes: <input type='text' name='StreamingTV_Yes'><br> -->
+  StreamingTV: <input type='text' name='StreamingTV'><br>  <!-- No internet service/Yes-->
+
+
+  <!--  StreamingMovies_Nointernetservice: <input type='text' name='StreamingMovies_No internet service'><br>
+  StreamingMovies_Yes: <input type='text' name='StreamingMovies_Yes'><br> -->
+  StreamingMovies: <input type='text' name='StreamingMovies'><br>  <!-- No internet service/Yes-->
+
+
+  <!--  Contract_Oneyear: <input type='text' name='Contract_One year'><br>
+  Contract_Twoyear: <input type='text' name='Contract_Two year'><br> -->
+  Contract: <input type='text' name='Contract'><br>  <!-- One year / Two year-->
+
+
+  <!--  PaperlessBilling_Yes: <input type='text' name='PaperlessBilling_Yes'><br> -->
+  PaperlessBilling: <input type='text' name='PaperlessBilling'><br>  <!-- Yes-->
+
+  <!--  PaymentMethod_Creditcard: <input type='text' name='PaymentMethod_Credit card (automatic)'><br>
+  PaymentMethod_Electroniccheck: <input type='text' name='PaymentMethod_Electronic check'><br>
+  PaymentMethod_Mailedcheck: <input type='text' name='PaymentMethod_Mailed check'><br>-->
+  PaymentMethod: <input type='text' name='PaymentMethod'><br>  <!-- Credit card / Electronic check / Mailedcheck-->
+
+
+<br><br>
+
+            Prediction: {{ans}} <br><br><hr>
+            <input type='submit' value='Predict'>
+  
+        </form>
+    </div>
+</center>
+    </body>
+</html>
+
